@@ -19,8 +19,6 @@ esac
 . /usr/share/initramfs-tools/hook-functions
 
 copy_exec /usr/bin/ykchalresp
-cat > ${DESTDIR}/etc/yubikey-challenge <<EOF
-f5ef03d4-9148-452d-99f0-4ad09d73e234
-EOF
-cp /home/tfheen/src/ykfde/helper "${DESTDIR}/sbin/ykfde-keyscript"
+cp /boot/yubikey-challenge "${DESTDIR}/etc/yubikey-challenge"
+cp /usr/share/ykfde/ykfde-keyscript "${DESTDIR}/sbin/ykfde-keyscript"
 exit 0
