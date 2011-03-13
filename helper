@@ -1,7 +1,6 @@
 #! /bin/sh
 
 set -e
-set -x
 
 R="$(ykchalresp "$(cat /etc/yubikey-challenge)" 2>/dev/null || true )"
 if [ -z "$R" ]; then
@@ -26,3 +25,4 @@ chmod 700 /dev/.run/ykfde
 echo "$R" > /dev/.run/ykfde/secret
 echo "$cryptsource" > /dev/.run/ykfde/cryptsource
 echo -n "$R"
+exit 0
