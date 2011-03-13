@@ -1,0 +1,28 @@
+#! /bin/sh
+
+set -e
+set -x
+
+R="$(ykchalresp "$(cat /etc/yubikey-challenge)" 2>/dev/null || true )"
+if [ -z "$R" ]; then
+    echo "Please insert yubikey or press enter to use password unlocking" >&2
+    read a
+    R="$(ykchalresp "$(cat /etc/yubikey-challenge)" 2>/dev/null || true)"
+fi
+
+if [ -z "$R" ]; then
+    cryptkey="Unlocking the disk $cryptsource ($crypttarget)\nEnter passphrase: "
+    if [ -x /bin/plymouth ] && plymouth --ping; then
+	cryptkeyscript="plymouth ask-for-password --prompt"
+	cryptkey=$(echo -e "$cryptkey")
+    else
+	cryptkeyscript="/lib/cryptsetup/askpass"
+    fi
+    exec $cryptkeyscript "$cryptkey"
+fi
+
+mkdir -p /dev/.run/ykfde
+chmod 700 /dev/.run/ykfde
+echo "$R" > /dev/.run/ykfde/secret
+echo "$cryptsource" > /dev/.run/ykfde/cryptsource
+echo -n "$R"
