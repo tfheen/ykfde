@@ -1,0 +1,13 @@
+Source: ykfde
+Section: admin
+Priority: extra
+Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Build-Depends: debhelper (>= 7.0.50)
+Standards-Version: 3.8.3
+
+Package: ykfde
+Architecture: all
+Depends: initramfs-tools, ykpersonalize (>= 1.5)
+Description: Yubikey full disk encryption
+ Full disk encryption using the Yubikey challenge/response
+ support. Requires a Yubikey version 2.2 or newer.
