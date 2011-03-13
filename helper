@@ -22,7 +22,6 @@ fi
 
 mkdir -p /dev/.run/ykfde
 chmod 700 /dev/.run/ykfde
-echo "$R" > /dev/.run/ykfde/secret
 echo "$cryptsource" > /dev/.run/ykfde/cryptsource
 echo -n "$R"
 exit 0
