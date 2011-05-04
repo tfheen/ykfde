@@ -2,6 +2,7 @@
 
 set -e
 
+udevadm settle || true
 R="$(ykchalresp "$(cat /etc/yubikey-challenge)" 2>/dev/null || true )"
 if [ -z "$R" ]; then
     echo "Please insert yubikey or press enter to use password unlocking" >&2
