@@ -18,7 +18,9 @@ esac
 
 . /usr/share/initramfs-tools/hook-functions
 
+manual_add_modules hid_generic
 copy_exec /usr/bin/ykchalresp
+
 cp /boot/yubikey-challenge "${DESTDIR}/etc/yubikey-challenge"
 cp /usr/share/ykfde/ykfde-keyscript "${DESTDIR}/sbin/ykfde-keyscript"
 exit 0
