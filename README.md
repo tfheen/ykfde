@@ -6,7 +6,7 @@ yubikey-based full disk encryption
 Quick start:
 ------------
 
-* install the package
+install the package
 
     uuidgen > /boot/yubikey-challenge
     ykchalresp -2 $(cat /boot/yubikey-challenge)
