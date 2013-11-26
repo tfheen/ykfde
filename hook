@@ -18,7 +18,7 @@ esac
 
 . /usr/share/initramfs-tools/hook-functions
 
-manual_add_modules hid_generic
+manual_add_modules hid_generic usbhid usbcore ehci_hcd ehci_pci
 copy_exec /usr/bin/ykchalresp
 
 cp /boot/yubikey-challenge "${DESTDIR}/etc/yubikey-challenge"
