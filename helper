@@ -13,10 +13,10 @@ fi
 if [ -z "$R" ]; then
     cryptkey="Unlocking the disk $cryptsource ($crypttarget)\nEnter passphrase: "
     if [ -x /bin/plymouth ] && plymouth --ping; then
-	cryptkeyscript="plymouth ask-for-password --prompt"
-	cryptkey=$(echo -e "$cryptkey")
+        cryptkeyscript="plymouth ask-for-password --prompt"
+        cryptkey=$(echo -e "$cryptkey")
     else
-	cryptkeyscript="/lib/cryptsetup/askpass"
+        cryptkeyscript="/lib/cryptsetup/askpass"
     fi
     exec $cryptkeyscript "$cryptkey"
 fi

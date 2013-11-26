@@ -6,15 +6,15 @@ PREREQ=""
 
 prereqs()
 {
-	echo "$PREREQ"
+    echo "$PREREQ"
 }
 
 case $1 in
 # get pre-requisites
 prereqs)
-	prereqs
-	exit 0
-	;;
+    prereqs
+    exit 0
+    ;;
 esac
 
 if [ -e /etc/yubikey-challenge ]; then
