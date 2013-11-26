@@ -6,7 +6,7 @@ yubikey-based full disk encryption
 Quick start:
 ------------
 
-# install the package
+* install the package
 
     # uuidgen > /boot/yubikey-challenge
     # ykchalresp -2 $(cat /boot/yubikey-challenge)
@@ -20,4 +20,4 @@ Limitations/bugs:
 -----------------
 * uses only slot 2 ykchalresp settings, meaning no support for slot 1
 * does not update the challenge after each boot.
-* doesn't work, yet :-)
+* doesn't work for me, yet :-)
