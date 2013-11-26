@@ -8,9 +8,9 @@ Quick start:
 
 * install the package
 
-    # uuidgen > /boot/yubikey-challenge
-    # ykchalresp -2 $(cat /boot/yubikey-challenge)
-    # cryptsetup luksAddKey /dev/sda2 <(ykchalresp -2 $(cat /boot/yubikey-challenge))
+    uuidgen > /boot/yubikey-challenge
+    ykchalresp -2 $(cat /boot/yubikey-challenge)
+    cryptsetup luksAddKey /dev/sda2 <(ykchalresp -2 $(cat /boot/yubikey-challenge))
 
 On bootup, you will be asked to insert a yubikey (2.2 or newer) which
 will then provide the response.  If you do not want to use a yubikey,
