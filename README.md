@@ -1,6 +1,8 @@
 ykfde
 =====
-yubikey-based full disk encryption
+*y*ubikey *f*ull *d*isk *e*ncryption
+
+(yubikey support for luKs)
 
 
 Quick start:
