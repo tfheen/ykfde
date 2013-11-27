@@ -1,4 +1,9 @@
 #!/bin/sh
+#
+# Will be named:
+# /usr/share/initramfs-tools/hooks/ykfde
+#
+
 
 set -e
 

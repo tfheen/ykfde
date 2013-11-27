@@ -1,4 +1,8 @@
 #! /bin/sh
+#
+# Will be named:
+# /usr/share/initramfs-tools/scripts/local-top/ykfde
+#
 
 set -e
 
