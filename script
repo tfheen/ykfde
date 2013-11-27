@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 #
 # Will be named:
 # /usr/share/initramfs-tools/scripts/local-top/ykfde
@@ -14,7 +14,6 @@ prereqs()
 }
 
 case $1 in
-# get pre-requisites
 prereqs)
     prereqs
     exit 0

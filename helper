@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 #
 # Will be named:
 # /usr/share/ykfde/ykfde-keyscript

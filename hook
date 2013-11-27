@@ -4,7 +4,6 @@
 # /usr/share/initramfs-tools/hooks/ykfde
 #
 
-
 set -e
 
 PREREQ="cryptroot"
