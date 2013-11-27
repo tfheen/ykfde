@@ -1,6 +1,6 @@
 ykfde
 =====
-*y*ubi*k*ey *f*ull *d*isk *e*ncryption
+*y*ubikey *f*ull *d*isk *e*ncryption
 
 (yubikey support for luKs)
 
