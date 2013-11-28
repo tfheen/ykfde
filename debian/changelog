@@ -1,3 +1,9 @@
+ykfde (1+uxix+1) uxix-wheezy; urgency=low
+
+  * My first working (for me!) version.
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Wed, 27 Nov 2013 23:35:08 +0100
+
 ykfde (1) unstable; urgency=low
 
   * Initial release.

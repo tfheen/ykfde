@@ -1,8 +1,8 @@
 ykfde
 =====
-*y*ubikey *f*ull *d*isk *e*ncryption
+YubiKey Full Disk Encryption
 
-(yubikey support for luKs)
+(yubikey support for LUKS)
 
 
 Quick start:
@@ -22,4 +22,3 @@ Limitations/bugs:
 -----------------
 * uses only slot 2 ykchalresp settings, meaning no support for slot 1
 * does not update the challenge after each boot.
-* doesn't work for me, yet :-)
