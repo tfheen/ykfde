@@ -1,0 +1,5 @@
+#YKOPTS="-2"
+#LUKS_DEVICE="/dev/sda2"
+#LUKS_SLOT="7"
+#CHALLENGE_FILE="/boot/yubikey-challenge"
+

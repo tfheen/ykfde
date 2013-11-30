@@ -1,3 +1,9 @@
+ykfde (1+uxix+2) uxix-wheezy; urgency=low
+
+  * added ctl-script
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Sat, 30 Nov 2013 22:38:20 +0100
+
 ykfde (1+uxix+1) uxix-wheezy; urgency=low
 
   * My first working (for me!) version.
