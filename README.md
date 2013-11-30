@@ -28,7 +28,7 @@ Changing the key on each reboot
 This is still very basic.
 
     # ln -s /usr/sbin/ykfdectl /etc/init.d/ykfdectl
-    # ln -s /etc/init.d/ykfdectl /etc/rc2.d/S99ykfdectl
+    # ln -s /etc/init.d/ykfdectl /etc/rc2.d/S26ykfdectl
 
 
 Limitations/bugs:
