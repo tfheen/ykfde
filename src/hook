@@ -9,11 +9,6 @@ set -e
 # set the defaults
 CHALLENGE_FILE="/boot/yubikey-challenge"
 
-# read defaults..
-if [ -e /etc/default/ykfde ]; then
-    . /etc/default/ykfde
-fi
-
 PREREQ="cryptroot"
 
 prereqs()
@@ -33,6 +28,14 @@ esac
 manual_add_modules hid_generic usbhid usbcore ehci_hcd ehci_pci
 copy_exec /usr/bin/ykchalresp
 
-cp /${CHALLENGE_FILE} "${DESTDIR}/etc/yubikey-challenge"
+# read defaults..
+if [ -e /etc/default/ykfde ]; then
+    . /etc/default/ykfde
+    # now copy them to the initrd
+    mkdir "${DESTDIR}/etc/default"
+    cp /etc/default/ykfde "${DESTDIR}/etc/default/ykfde"
+fi
+
+cp ${CHALLENGE_FILE} "${DESTDIR}/etc/yubikey-challenge"
 cp /usr/share/ykfde/ykfde-keyscript "${DESTDIR}/sbin/ykfde-keyscript"
 exit 0
