@@ -1,3 +1,10 @@
+ykfde (1+uxix+3) uxix-wheezy; urgency=low
+
+  * added init-script
+  * better configuration
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Sun, 01 Dec 2013 14:29:13 +0100
+
 ykfde (1+uxix+2) uxix-wheezy; urgency=low
 
   * added ctl-script

@@ -9,7 +9,7 @@ CHALLENGE_FILE="/boot/yubikey-challenge"
 
 # read defaults..
 if [ -e /etc/default/ykfde ]; then
-    source /etc/default/ykfde
+    . /etc/default/ykfde
 fi
 
 

@@ -1,5 +1,18 @@
-#YKOPTS="-2"
-#LUKS_DEVICE="/dev/sda2"
-#LUKS_SLOT="7"
-#CHALLENGE_FILE="/boot/yubikey-challenge"
+# Defaults for ykfde
+# sourced by /etc/init.d/ykfde and /usr/sbin/ykfdectl
+# installed at /etc/default/ykfde by the maintainer scripts
+#
+# This is a POSIX shell fragment
+#
+# Normaly used to select only the slot
+# YKOPTS="-2"
+# 
+# The device which is used
+# LUKS_DEVICE="/dev/sda2"
+#
+# LUKS slot, where your yubikey-challenged key is stored
+# LUKS_SLOT="7"
+#
+# the challenge file, which is used to get a response
+# CHALLENGE_FILE="/boot/yubikey-challenge"
 

@@ -27,11 +27,30 @@ Changing the key on each reboot
 
 This is still very basic.
 
-    # ln -s /usr/sbin/ykfdectl /etc/init.d/ykfdectl
-    # ln -s /etc/init.d/ykfdectl /etc/rc2.d/S26ykfdectl
+    # update-rc.d ykfde defaults
+
+Configuration
+-------------
+see =/etc/default/ykfde=
+
+Normaly used to select only the slot
+    
+    YKOPTS="-2"
+
+The device which is used
+    
+    LUKS_DEVICE="/dev/sda2"
+
+LUKS slot, where your yubikey-challenged key is stored
+    
+    LUKS_SLOT="7"
+
+the challenge file, which is used to get a response
+    
+    CHALLENGE_FILE="/boot/yubikey-challenge"
 
 
 Limitations/bugs:
 -----------------
-* uses only slot 2 ykchalresp settings, meaning no support for slot 1
 * might need more error-handling.
+* lacks a two-factor-mode
