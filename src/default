@@ -2,16 +2,19 @@
 # sourced by /etc/init.d/ykfde and /usr/sbin/ykfdectl
 # installed at /etc/default/ykfde by the maintainer scripts
 #
+#  WARNING: If you change something here, you need to run "ykfdectl update", to
+#           update your initrd. Otherwise, you will not be able to boot.
+#
 # This is a POSIX shell fragment
 #
 # Normaly used to select only the slot
 # YKOPTS="-2"
-# 
+#
 # The device which is used
 # LUKS_DEVICE="/dev/sda2"
 #
 # LUKS slot, where your yubikey-challenged key is stored
-# LUKS_SLOT="7"
+# LUKS_SLOT="7" (use "multi" for multiple keys and edit /etc/ykfde.conf)
 #
 # the challenge file, which is used to get a response
 # CHALLENGE_FILE="/boot/yubikey-challenge"

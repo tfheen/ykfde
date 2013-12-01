@@ -8,7 +8,8 @@ override_dh_install:
 	install -D -o root -g root -m755 src/hook debian/ykfde/usr/share/initramfs-tools/hooks/ykfde
 	install -D -o root -g root -m755 src/script debian/ykfde/usr/share/initramfs-tools/scripts/local-top/ykfde
 	install -D -o root -g root -m755 src/helper debian/ykfde/usr/share/ykfde/ykfde-keyscript
-	install -D -o root -g root -m644 src/default debian/ykfde/etc/default/ykfde
 	install -D -o root -g root -m700 src/ykfde.sh debian/ykfde/usr/sbin/ykfdectl
+	install -D -o root -g root -m644 src/default debian/ykfde/etc/default/ykfde
+	install -D -o root -g root -m600 src/ykfde.conf debian/ykfde/etc/ykfde.conf
 	install -D -o root -g root -m755 src/init debian/ykfde/etc/init.d/ykfde
 	install -D -o root -g root -m644 README.md debian/ykfde/usr/share/doc/ykfde/README.md

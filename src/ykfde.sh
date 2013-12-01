@@ -10,6 +10,22 @@ CHALLENGE_FILE="/boot/yubikey-challenge"
 # read defaults..
 if [ -e /etc/default/ykfde ]; then
     . /etc/default/ykfde
+
+    if [ "${LUKS_SLOT}" == "multi" ]; then
+        echo -ne "LUKS_SLOT is set to 'multi': "
+        . /etc/ykfde.conf
+        YK_SERIAL="$(ykinfo -s | awk '{print $NF}')"
+        for (( i = 0; i < 8; i++ )); do
+            if [ "${LUKS_SLOT[${i}]}" == "${YK_SERIAL}" ]; then
+                LUKS_SLOT=${i}
+                echo "Using slot ${i}"
+            fi
+        done
+    fi
+    if [ "${LUKS_SLOT}" == "multi" ]; then
+        echo "No matching Yubikey found".
+        exit 2
+    fi
 fi
 
 
