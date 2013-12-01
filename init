@@ -4,7 +4,6 @@
 # Provides:          ykfde
 # Required-Start:    $local_fs $remote_fs
 # Required-Stop:
-# X-Start-Before:    rmnologin
 # Default-Start:     2 3 4 5
 # Default-Stop:
 # Short-Description: update yubikey-challenge
