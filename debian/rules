@@ -10,3 +10,4 @@ override_dh_install:
 	install -D -o root -g root -m755 helper debian/ykfde/usr/share/ykfde/ykfde-keyscript
 	install -D -o root -g root -m644 default debian/ykfde/etc/default/ykfde
 	install -D -o root -g root -m700 ykfde.sh debian/ykfde/usr/sbin/ykfdectl
+	install -D -o root -g root -m755 init debian/ykfde/etc/init.d/ykfde
