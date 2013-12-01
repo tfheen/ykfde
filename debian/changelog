@@ -1,4 +1,10 @@
-ykfde (1+uxix+4) UNRELEASED; urgency=low
+ykfde (1+uxix+5) UNRELEASED; urgency=low
+
+  * added multiple Yubikeys-Feature 
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Sun, 01 Dec 2013 15:48:44 +0100
+
+ykfde (1+uxix+4) uxix-wheezy; urgency=low
 
   * added readme
 
