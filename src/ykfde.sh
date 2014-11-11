@@ -31,7 +31,7 @@ fi
 
 function get_new_challenge () { # {{{
     if [ -z ${CHALLENGE} ]; then
-        export CHALLENGE="$(base64 < /dev/urandom | head -c 64)"
+        export CHALLENGE="$(dd if=/dev/urandom bs=64 count=2 2> /dev/null | base64 | head -c 64)"
         if ykinfo $YKOPTS >/dev/null ; then
             echo -ne "${CHALLENGE}" > ${CHALLENGE_FILE}.new
             chmod 400 ${CHALLENGE_FILE}.new
