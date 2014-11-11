@@ -29,9 +29,13 @@ This is still very basic.
 
     # update-rc.d ykfde defaults
 
+Or if you use systemd:
+
+    # systemctl enable ykfde.service
+
 Configuration
 -------------
-see =/etc/default/ykfde=
+see /etc/default/ykfde
 
 Normaly used to select only the slot
     
