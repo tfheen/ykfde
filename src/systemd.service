@@ -6,15 +6,14 @@
 #  (at your option) any later version.
 
 # This unit gets pulled automatically into multi-user.target by
-# systemd-rc-local-generator if  /boot/yubikey-challenge is not empty
+# systemd-rc-local-generator if /boot/yubikey-challenge is not empty
 [Unit]
 Description=ykfde update
 ConditionFileNotEmpty=/boot/yubikey-challenge
-After=network.target
 
 [Service]
-Type=forking
+Type=oneshot
 ExecStart=/usr/sbin/ykfdectl update
-TimeoutSec=0
-RemainAfterExit=yes
-SysVStartPriority=98
+
+[Install]
+WantedBy=multi-user.target

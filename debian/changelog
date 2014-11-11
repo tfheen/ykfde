@@ -1,4 +1,11 @@
-ykfde (1+uxix+5) UNRELEASED; urgency=low
+ykfde (2+uxix+1) jessy-uxix; urgencyloq
+
+  * first release for jessie
+  * added support for systemd
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Tue, 11 Nov 2014 23:10:45 +0100
+
+ykfde (1+uxix+5) uxix-wheezy; urgency=low
 
   * added multiple Yubikeys-Feature 
 
