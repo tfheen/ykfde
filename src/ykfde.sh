@@ -30,9 +30,9 @@ fi
 
 
 function get_new_challenge () { # {{{
-    if [ -z ${CHALLENGE} ]; then
+    if [ -z "${CHALLENGE}" ]; then
         export CHALLENGE="$(dd if=/dev/urandom bs=64 count=2 2> /dev/null | base64 | head -c 64)"
-        if ykinfo $YKOPTS >/dev/null ; then
+        if ykinfo ${YKOPTS} >/dev/null ; then
             echo -ne "${CHALLENGE}" > ${CHALLENGE_FILE}.new
             chmod 400 ${CHALLENGE_FILE}.new
         else
@@ -42,7 +42,7 @@ function get_new_challenge () { # {{{
 } # }}}
 
 function get_old_challenge () { # {{{
-    if [ -z ${OLD_CHALLENGE} ]; then
+    if [ -z "${OLD_CHALLENGE}" ]; then
         export OLD_CHALLENGE="$(cat ${CHALLENGE_FILE})"
         mv ${CHALLENGE_FILE} ${CHALLENGE_FILE}.old
     fi
