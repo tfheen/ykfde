@@ -1,4 +1,4 @@
-ykfde (2+uxix+1) jessy-uxix; urgencyloq
+ykfde (2+uxix+1) jessy-uxix; urgency=low
 
   * first release for jessie
   * added support for systemd
