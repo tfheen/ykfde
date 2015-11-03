@@ -77,7 +77,7 @@ function add_new_key () { # {{{
     if get_and_verify_chalresp; then
         cryptsetup luksAddKey \
             --key-slot ${LUKS_SLOT} ${LUKS_DEVICE} \
-            <(echo "$CHALRESP")
+            <(echo "${CHALRESP}")
 
         if [ "${?}" == "0" ]; then
             mv  ${CHALLENGE_FILE}.new ${CHALLENGE_FILE}
@@ -93,7 +93,7 @@ function update_key () { # {{{
 
         cryptsetup luksChangeKey \
             --key-slot ${LUKS_SLOT} ${LUKS_DEVICE} \
-            --key-file <( echo "${OLD_KEY}" ) <(echo "$CHALRESP")
+            --key-file <( echo "${OLD_KEY}" ) <(echo "${CHALRESP}")
 
         if [ "${?}" == "0" ]; then
             mv  ${CHALLENGE_FILE}.new ${CHALLENGE_FILE} && \
