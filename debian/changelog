@@ -1,3 +1,54 @@
+ykfde (3+uxix+1) jessie-uxix; urgency=medium
+
+  * merged with github/ainfosec-henselb
+  * this fixed: ykfdectl update
+
+ -- Klaus Umbach <klaus@uxix.de>  Tue, 03 Nov 2015 22:02:38 +0100
+
+ykfde (2+uxix+2) jessie-uxix; urgency=medium
+
+  * minor beautifications
+
+ -- Klaus Umbach <klaus@uxix.de>  Sat, 24 Oct 2015 23:22:56 +0200
+
+ykfde (2+uxix+1) jessie-uxix; urgency=low
+
+  * first release for jessie
+  * added support for systemd
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Tue, 11 Nov 2014 23:10:45 +0100
+
+ykfde (1+uxix+5) uxix-wheezy; urgency=low
+
+  * added multiple Yubikeys-Feature 
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Sun, 01 Dec 2013 15:48:44 +0100
+
+ykfde (1+uxix+4) uxix-wheezy; urgency=low
+
+  * added readme
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Sun, 01 Dec 2013 14:37:04 +0100
+
+ykfde (1+uxix+3) uxix-wheezy; urgency=low
+
+  * added init-script
+  * better configuration
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Sun, 01 Dec 2013 14:29:13 +0100
+
+ykfde (1+uxix+2) uxix-wheezy; urgency=low
+
+  * added ctl-script
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Sat, 30 Nov 2013 22:38:20 +0100
+
+ykfde (1+uxix+1) uxix-wheezy; urgency=low
+
+  * My first working (for me!) version.
+
+ -- Klaus Umbach <klaus-debian@uxix.de>  Wed, 27 Nov 2013 23:35:08 +0100
+
 ykfde (1) unstable; urgency=low
 
   * Initial release.

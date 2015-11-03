@@ -1,0 +1,4 @@
+debian/files
+debian/ykfde.debhelper.log
+debian/ykfde.substvars
+debian/ykfde
