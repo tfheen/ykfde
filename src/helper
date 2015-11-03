@@ -10,7 +10,9 @@ YKOPTS="-2"
 
 # read defaults..
 if [ -e /etc/default/ykfde ]; then
-    source /etc/default/ykfde
+    # using 'source' was throwing error (ubuntu 15.10), changed to '.'
+    # source /etc/default/ykfde
+    . /etc/default/ykfde
 fi
 
 udevadm settle || true

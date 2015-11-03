@@ -8,12 +8,17 @@ YubiKey Full Disk Encryption
 Quick start:
 ------------
 
-First install the package, then do something like the following (with your
-yubikey plugged in!)
+1. Build and install the package with "debuild" tool and dpkg
 
-    # ykfdectl new
+     $ debuild -us -uc
 
-On bootup, you will be asked to insert a yubikey (2.2 or newer) which
+2. Edit /etc/default/ykfde to select the correct partition (default: /dev/sda2)
+3. Use yubikey configuration tool to set a slot (default: slot #2) in hmac challenge-response mode
+4. Use ykfdectl utility (installed by this package) to pair with your yubikey
+
+     # ykfdectl new
+
+On bootup, you will be asked to insert your yubikey (2.2 or newer) which
 will then provide the response.  If you do not want to use a yubikey,
 press enter and then enter a normal passphrase during bootup.
 
